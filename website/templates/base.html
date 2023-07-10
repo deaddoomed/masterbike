@@ -49,11 +49,11 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'product_list' %}?tipoprod=bicicleta">Bicicletas</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'product_list' %}?tipoprod=Bicicleta">Bicicletas</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'product_list' %}?tipoprod=repuesto">Repuestos</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'product_list' %}?tipoprod=Repuesto">Repuestos</a>
                     </li>
 
                 </ul>
@@ -62,15 +62,15 @@
             <div class="col-md-1">
                 {% if user.is_authenticated %}
                     <h4 class="text-light">{{user.username}}</h4>
-                    <a class="btn btn-primary" type="login" href="{% url 'logout'%}">Cerrar Sesion</a> 
+                    <a class="btn btn-warning" type="login" href="{% url 'logout'%}">Cerrar Sesion</a> 
                 {% else %}
-                    <a class="btn btn-primary" type="login" href="{% url 'login'%}">Login</a> 
+                    <a class="btn btn-warning" type="login" href="{% url 'login'%}">Login</a> 
                 {% endif %}
             </div>
 
             <div class="col-md-1">
                 <a>
-                    <a type="button" class="btn btn-primary" href="">
+                    <a type="button" class="btn btn-warning" href="">
                         <img src="{% static 'img/cart.png'%}" alt="cart"> Carrito
                     </a>
                 </a>

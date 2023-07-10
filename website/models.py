@@ -8,7 +8,7 @@ class Product(models.Model):
     marca = models.CharField(max_length=100)
     imagen= models.ImageField(blank=True, null= True)
     precio = models.IntegerField()
-    arrendado = models.BinaryField()
+    arrendado = models.BooleanField(default=False)
 
     def __str__(self):
         return self.nombre

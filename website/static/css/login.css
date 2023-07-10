@@ -9,7 +9,7 @@
 
 body{
 
-    background-image: url(../img/anuncio_1.jpg);
+    background-image: url(../img/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,7 +40,7 @@ form{
     display: flex;
     justify-content: center;
     backdrop-filter: blur(10px);
-    background-color: rgba(198, 182, 212, 0.73)
+    background-color: #f0ad4e
 }
 
 .caja-fija div{
