@@ -1,0 +1,54 @@
+.navbar {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    min-height: 50px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 80px;
+    margin-right: 5px;
+}
+
+.navbar-brand h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.3rem;
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+.navbar-nav .nav-link {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar-collapse .navbar-nav {
+    margin-top: 0.5rem;
+}
+
+.form-control {
+    height: calc(1.5em + 0.5rem);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.align-form {
+    margin-top: auto;
+}
+
+.invalid-feedback {
+    display: block;
+}

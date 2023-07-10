@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% block content %} {%load static %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+    <main class="px-3">
+        <h1>Soporte</h1>
+        <p class="lead">Si necesitas ayuda con tu compra, contáctanos al correo <a href="{% url 'contact' %}">Contacto</a>.</p>
+        <h2>Contacto</h2>
+        <p class="lead">Si necesitas saber algo sobre tu pedido, puedes contactarnos al número <a href="tel:6006009876">600 600 9876</a>.</p>
+
+    </main>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}{% block content %} {%load static %}
+
+<section class="text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light" id="titulo-seccion"></h1>
+            <p class="lead text-muted">aqui encontraras todo lo que necesitas</p>
+        </div>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% if products %} {% for product in products %}
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="{% static 'img/' %}{{product.imagen}}" class="bd-placeholder-img card-img-top">
+                    <div class="card-body">
+                        <h3 class="fw-light">{{product.nombre}}</h3>
+                        <h5 class="fw-light">{{product.marca}}</h5>
+
+                        {% if product.oferta == 0 %}
+                        <h6 class="fw-light"><strong>Precio</strong></h6>
+                        <h4 class="text-danger">${{product.precio}}</h4>
+                        <h6><br></h6>
+                        {% else %}
+                        <h6 class="fw-light"><strong>Precio</strong></h6>
+                        <strike><h6 class="fw-light">${{product.precio}}</h6></strike>
+                        <h4 class="text-danger">${{product.oferta}}</h4>
+                        {% endif %}
+                        <p class="card-text">{{product.descripcion}}</p>
+                        <p class="card-text2">{{product.tipoprod}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="submit" href="{% url 'add' %}?nombre={{product.nombre}}&precio={{product.precio}}" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                            </div>
+                            <small class="text-muted ">Stock {{product.stock}}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% else %}
+<div class="col">
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h3 class="fw-light">No hay nada por el momento</h3>
+            <h4 class="text-danger"></h4>
+            <p class="card-text">Pronto tendremos disponible más equipos para sus trabajos</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">...</small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}{% endblock %}

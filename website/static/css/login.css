@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: name;
+    font-family: sans-serif;
+
+}      
+
+body{
+
+    background-image: url(../img/anuncio_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+main{
+
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor-principal{
+
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+form{
+
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(198, 182, 212, 0.73)
+}
+
+.caja-fija div{
+
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.caja-fija div p,
+.caja-fija div button{
+
+    margin-top: 30px;
+}
+
+.caja-fija div h3{
+
+    font-weight: 400;
+    font-size: 26px;
+}
+
+button{
+
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #262526;
+    outline: none;
+}
+
+.caja-fija button:hover{
+
+    background: #262526;
+    color: #f2e7e6;
+}
+
+/*Formularios*/
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: .1px;
+}
+p {
+    margin-top: 0;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    
+}
+.contenedor-doble{
+
+    display: flex;
+    align-items: center;
+    width: 110%;
+    max-width: 300px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor-doble form{
+
+    width: 122%;
+    padding: 80px 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
+    height: 700px;
+}
+
+.contenedor-doble form h2{
+
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #262526;
+}
+
+.contenedor-doble form input{
+
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none;
+}
+
+form button{
+
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #262526;
+    outline: none;
+}
+
+
+
+.form-registro {
+    margin-left: 360px;
+    height: 7000px;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 850px){
+    
+    main{
+        margin-top: 50px;
+    }
+    .caja-fija{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja-fija div{
+
+        margin: 0px;
+        position: absolute;
+    }
+    
+    .contenedor-doble{
+        top: 10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor-doble form{
+        position: relative;
+    }
+
+    .custom-button {
+        background-color: red;
+        color: white;
+      }
+}
