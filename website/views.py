@@ -13,26 +13,25 @@ def product_list(request):
 
     return render(request, 'product_list.html', {'products': products})
 
-#---------------carrito------------
-def rent_list(request):
-    items = Stock.objects.all()   
-
-    return render(request, 'arriendo.html', {'items': items})
-
-def delete_item(request):
-    return True
-
-def add_item(request):
-    nombre = request.POST.get('nombre')
-    precio = request.POST.get('precio')
-    data = {'nombre':nombre, 'precio':precio, 'cantidad':1 }
-    data.save()
-
-    return render(request, 'arriendo.html',data)
-
 #--------------carrito2----------------
 def carrito(request):
     return render(request, 'carrito.html')
+
+def arrendar(request):
+    # Realizar acciones para el arriendo aquí
+
+    # Vaciar el carrito
+    carrito = []
+    renderizarCarrito()
+
+    # Agregar mensaje de arrendado
+    messages.success(request, 'Arrendado')
+
+    # Redirigir a la página de arriendo realizado
+    return redirect('arriendo_realizado')
+
+def arriendo_realizado(request):
+    return render(request, 'arriendo_realizado.html')
 
 #--------------index-------------
 
