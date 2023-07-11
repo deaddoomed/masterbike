@@ -9,22 +9,24 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{% static 'img/anuncio_1.jpg' %}" class="d-block w-100" alt="anuncio1">
+                <img src="{% static 'img/anuncio1.jpg' %}" class="d-block w-100" alt="anuncio1">
                 <div class="carousel-caption d-none d-md-block">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProducto1">
-                        <h4>El clásico Neumann U87</h4>
+                    <button type="button" class="btn btn-primary">
+                        <a href="{% url 'product_list' %}?tipoprod=Bicicleta" style="color: azure; text-decoration:none" >
+                            <h4>Recorre lugares</h4>
+                        </a>
                       </button>
-                    <p>Graba tus voces con el micrófono estándar del mercado.</p>
+                    <p></p>
                 </div>
             </div>
 
-            <!-- Modal para el producto 1 -->
+            <!-- Modal para el producto 1 
             <div class="modal fade" id="modalProducto1" tabindex="-1" aria-labelledby="modalProducto1Label" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <div class="row g-0">
                             <div class="col-md-6" style="margin-top: 5%;">
-                                <img src="{% static 'img/condensador_1.jpg' %}" class="img-fluid rounded-start" alt="Neumann_U87">
+                                <img src="{% static 'img/anuncio1.jpg' %}" class="img-fluid rounded-start" alt="Neumann_U87">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -43,30 +45,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
 
             <div class="carousel-item">
-                <img src="{% static 'img/anuncio_2.jpg' %}" class="d-block w-100" alt="anuncio2">
+                <img src="{% static 'img/anuncio2.jpg' %}" class="d-block w-100" alt="anuncio2">
                 <div class="carousel-caption d-none d-md-block">
                     <button type="button" class="btn btn-primary">
-                            <a href="{% url 'product_list' %}?tipoprod=klark" style="color: azure; text-decoration:none" >
-                                <h4>Klark Teknik, la marca más economica del mercado</h4>                            
+                            <a href="{% url 'product_list' %}?tipoprod=Repuesto" style="color: azure; text-decoration:none" >
+                                <h4>viaja donde quieras</h4>                            
                             </a>
                         </button>
-                    <p>Con la trayectoria de decadas, Klark Teknik nos trae equipo al alcance de todo bolsillo.</p>
+                    <p></p>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="{% static 'img/anuncio_3.jpg' %}" class="d-block w-100" alt="anuncio3">
+                <img src="{% static 'img/anuncio3.jpg' %}" class="d-block w-100" alt="anuncio3">
                 <div class="carousel-caption d-none d-md-block">
                     <button type="button" class="btn btn-primary">
-                            <a href="{% url 'product_list' %}?tipoprod=preamplificador" style="color: azure; text-decoration:none" >
-                                <h4>Escoge tu sonido más adecuado</h4>
+                            <a href="{% url 'carrito' %}" style="color: azure; text-decoration:none" >
+                                <h4>arrienda</h4>
                             </a>
                         </button>
-                    <p>Dale color a tus grabaciones con nuestra seleccion de preamplificadores de microfono.</p>
+                    <p></p>
                 </div>
             </div>
         </div>

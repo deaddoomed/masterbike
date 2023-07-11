@@ -11,10 +11,10 @@
                         <h3 class="fw-light">{{product.nombre}}</h3>
                         <h5 class="fw-light">{{product.marca}}</h5>
                         <h6 class="fw-light"><strong>Precio</strong></h6>
-                        <h4 class="text-danger">${{product.precio}}</h4>               
+                        <h4 class="text-danger">${{product.precio}}</h4>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="submit" href="{% url 'add' %}?nombre={{product.nombre}}&precio={{product.precio}}" class="btn btn-sm btn-outline-secondary">Arrendar</button>
+                                <a type="submit" href="{% url 'carrito' %}" class="btn btn-sm btn-outline-secondary">Arrendar</a>
                             </div>
                         </div>
                     </div>

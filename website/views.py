@@ -30,6 +30,10 @@ def add_item(request):
 
     return render(request, 'arriendo.html',data)
 
+#--------------carrito2----------------
+def carrito(request):
+    return render(request, 'carrito.html')
+
 #--------------index-------------
 
 def index(request):
